@@ -1,3 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+ * Base styles
+ */
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212529;
+    min-height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgb(30, 0, 64) 0%,
+      rgba(15, 1, 40, 1) 100%
+    );
+    postition: relative;
+  }
+  .bg-circles div::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+  }
+  .bg-circles .bg-circle__1::before {
+    background: linear-gradient(
+      180deg,
+      rgba(32, 56, 107) 0%,
+      rgb(26, 15, 67) 90%
+    );
+    height: 80px;
+    width: 80px;
+  }
+  .bg-circles .bg-circle__2::before {
+    background: linear-gradient(
+      180deg,
+      rgba(119, 28, 118) 0%,
+      rgba(26, 15, 67) 90%
+    );
+    height: 100px;
+    width: 100px;
+  }
+  .bg-circles .bg-circle__3::before {
+    background: linear-gradient(
+      180deg,
+      rgba(117, 60, 40) 0%,
+      rgba(31, 8, 63) 90%
+    );
+    postition: absolute;
+    height: 150px;
+    width: 150px;
+  }
+  .footer-compass__1 {
+    display: block;
+    margin-top: 20px;
+    height: 90%;
+    width: 170vmin;
+    z-index: 100;
+    --webkit-clip-path: circle(50% at 51% 200%);
+    clip-path: circle(50% at 51% 200%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1) 90%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) opacity(0.2);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+  }
+  .footer-compass__icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-compass__terms {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

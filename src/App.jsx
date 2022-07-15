@@ -1,5 +1,11 @@
-import { useState } from "react";
 import { NavBar } from "./components";
+import {
+  SiYoutube,
+  SiFacebook,
+  SiLinkedin,
+  SiInstagram,
+  SiTwitter,
+} from "react-icons/si";
 
 function App() {
   const cards = [
@@ -14,14 +20,14 @@ function App() {
     text_color: "rgba(255,255,255,255)",
   };
   return (
-    <section className="min-h-screen bg-gradient-to-br from-violet-900 to-slate-900">
+    <section className="min-h-screen">
       <NavBar
         bg_color={style.bg_color}
         btn_color={style.btn_color}
         text_color={style.text_color}
       />
       <div className="flex items-center justify-center">
-        <div className="flex flex-col space-y-10 items-center justify-center text-center w-2/4">
+        <div className="flex flex-col space-y-8 items-center justify-center text-center w-2/4">
           <h1 className="text-4xl leading-normal font-bold uppercase text-white">
             something awesome is coming soon
           </h1>
@@ -51,7 +57,7 @@ function App() {
               />
               <input
                 type="text"
-                placeholder="First Name.."
+                placeholder="Last Name.."
                 className="text-sm text-white font-light py-2 outline-none border-t-0 border-l-0 border-r-0 px-5 bg-transparent border border-slate-400 current"
               />
             </div>
@@ -72,6 +78,32 @@ function App() {
               join our waiting list
             </button>
           </form>
+          <div className="bg-circles">
+            <div className="absolute top-[30%] right-[14%] bg-circle__1"></div>
+            <div className="absolute top-[20%] left-[12%] bg-circle__2"></div>
+            <div className="absolute -bottom-[15%] left-[24%] z-0 bg-circle__3"></div>
+          </div>
+          <div className="relative h-60 text-sm font-light flex items-center justify-center">
+            <div className="footer-compass h-60 text-sm font-light">
+              <div className="footer-compass__1">
+                <div className="footer-compass__icons">
+                  <SiYoutube />
+                  <SiFacebook />
+                  <SiLinkedin />
+                  <SiInstagram />
+                  <SiTwitter />
+                </div>
+                <div className="footer-compass__terms">
+                  <p>Terms of Service</p>
+                  <p>Privacy Policy</p>
+                </div>
+                <div className="footer-compass__copy">
+                  Copyright 2021 &copy; Peddle Technologies, All Rights
+                  Reserved.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
