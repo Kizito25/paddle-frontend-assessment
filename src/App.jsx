@@ -26,9 +26,9 @@ function App() {
         btn_color={style.btn_color}
         text_color={style.text_color}
       />
-      <div className="flex items-center justify-center">
-        <div className="flex flex-col space-y-8 items-center justify-center text-center w-2/4">
-          <h1 className="text-4xl leading-normal font-bold uppercase text-white">
+      <div className="flex items-center justify-center relative lg:static z-50">
+        <div className="flex flex-col space-y-4 lg:space-y-8 items-center justify-center text-center w-3/4 lg:w-2/4 py-20">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl leading-normal font-bold uppercase text-white mt-10 lg:mt-0">
             something awesome is coming soon
           </h1>
           <p className="text-sm font-extralight text-white">
@@ -36,40 +36,42 @@ function App() {
             <strong>track</strong>, <strong>automate</strong> and{" "}
             <strong>optimize</strong> your campaigns.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-2 lg:gap-4">
             {cards.map((card, index) => (
               <div
                 key={index + 1}
-                className="bg-white rounded-md p-3 grid grid-cols-1 space-y-2 w-20"
+                className="bg-white rounded-md p-2 grid grid-cols-1 space-y-1 lg:space-y-2 w-16 lg:w-20"
               >
-                <h2 className="text-4xl font-semibold">{card.figure}</h2>
+                <h2 className="text-3xl lg:text-4xl font-semibold">
+                  {card.figure}
+                </h2>
                 <p className="text-sm font-light">{card.title}</p>
               </div>
             ))}
           </div>
 
           <form className="space-y-5">
-            <div className="flex gap-3">
+            <div className="flex gap-1 lg:gap-3">
               <input
                 type="text"
                 placeholder="First Name.."
-                className="text-sm text-white font-light py-2 outline-none border-t-0 border-l-0 border-r-0 px-5 bg-transparent border border-slate-400 current"
+                className="w-1/2 text-sm text-white font-light py-2 outline-none border-t-0 border-l-0 border-r-0 px-5 bg-transparent border border-slate-400 current"
               />
               <input
                 type="text"
                 placeholder="Last Name.."
-                className="text-sm text-white font-light py-2 outline-none border-t-0 border-l-0 border-r-0 px-5 bg-transparent border border-slate-400 current"
+                className="w-1/2 text-sm text-white font-light py-2 outline-none border-t-0 border-l-0 border-r-0 px-5 bg-transparent border border-slate-400 current"
               />
             </div>
           </form>
-          <form className="relative w-[70%] flex">
+          <form className="relative w-[100%] lg:w-[70%] flex">
             <input
               type="email"
-              className="text-xs font-extralight outline-none rounded-full py-3 px-5 absolute bg-white w-full top-0 left-0"
+              className="text-xs font-extralight outline-none rounded-full py-3 px-5 absolute bg-white w-full top-3 lg:top-0 -left-10"
               placeholder="Enter your email address..."
             />
             <button
-              className="text-xs font-extralight uppercase outline-none rounded-full py-3 px-5 cursor-pointer absolute top-0 right-0"
+              className="text-xs font-extralight uppercase outline-none rounded-full py-3 px-5 cursor-pointer absolute top-3 lg:top-0 -right-10"
               style={{
                 backgroundColor: style.btn_color,
                 color: style.text_color,
@@ -79,11 +81,11 @@ function App() {
             </button>
           </form>
           <div className="bg-circles">
-            <div className="absolute top-[30%] right-[14%] bg-circle__1"></div>
-            <div className="absolute top-[20%] left-[12%] bg-circle__2"></div>
-            <div className="absolute -bottom-[15%] left-[24%] z-0 bg-circle__3"></div>
+            <div className="absolute top-[0] lg:top-[30%] -right-[0%] lg:right-[14%] bg-circle__1"></div>
+            <div className="absolute -top-[1%] lg:top-[20%] -left-[12%] lg:left-[12%] bg-circle__2"></div>
+            <div className="absolute bottom-14 lg:-bottom-[15%] left-[5%] lg:left-[24%] z-0 bg-circle__3"></div>
           </div>
-          <div className="relative h-60 text-sm font-light flex items-center justify-center">
+          <div className="hidden lg:flex items-center justify-center relative h-60 text-sm font-light">
             <div className="footer-compass h-60 text-sm font-light">
               <div className="footer-compass__1">
                 <div className="footer-compass__icons">
@@ -98,6 +100,27 @@ function App() {
                   <p>Privacy Policy</p>
                 </div>
                 <div className="footer-compass__copy">
+                  Copyright 2021 &copy; Peddle Technologies, All Rights
+                  Reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="lg:hidden  relative w-[100vw] -bottom-[12vh]">
+            <div className="backdrop-blur-lg backdrop-contrast-50 backdrop-opacity-60 w-full h-full rounded-t-full">
+              <div className="flex flex-col space-y-2 p-3">
+                <div className="footer-compass__icons_mobile flex items-center justify-center gap-4 mt-[15%] text-white">
+                  <SiYoutube />
+                  <SiFacebook />
+                  <SiLinkedin />
+                  <SiInstagram />
+                  <SiTwitter />
+                </div>
+                <div className="text-white text-sm font-light">
+                  <p>Terms of Service</p>
+                  <p>Privacy Policy</p>
+                </div>
+                <div className="text-white text-sm font-light">
                   Copyright 2021 &copy; Peddle Technologies, All Rights
                   Reserved.
                 </div>
