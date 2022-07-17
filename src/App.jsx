@@ -20,14 +20,14 @@ function App() {
     text_color: "rgba(255,255,255,255)",
   };
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen hero__coming-soon">
       <NavBar
         bg_color={style.bg_color}
         btn_color={style.btn_color}
         text_color={style.text_color}
       />
       <div className="flex items-center justify-center relative lg:static z-50">
-        <div className="flex flex-col space-y-4 lg:space-y-8 items-center justify-center text-center w-3/4 lg:w-2/4 py-20">
+        <div className="flex flex-col space-y-4 md:space-y-16 lg:space-y-8 items-center justify-center text-center w-3/4 lg:w-2/4 py-20">
           <h1 className="text-2xl md:text-3xl lg:text-4xl leading-normal font-bold uppercase text-white mt-10 lg:mt-0">
             something awesome is coming soon
           </h1>
@@ -81,9 +81,9 @@ function App() {
             </button>
           </form>
           <div className="bg-circles">
-            <div className="absolute top-[0] lg:top-[30%] -right-[0%] lg:right-[14%] bg-circle__1"></div>
-            <div className="absolute -top-[1%] lg:top-[20%] -left-[12%] lg:left-[12%] bg-circle__2"></div>
-            <div className="absolute bottom-14 lg:-bottom-[15%] left-[5%] lg:left-[24%] z-0 bg-circle__3"></div>
+            <div className="absolute top-[0] md:top-[15%] lg:top-[30%] -right-[0%] lg:right-[14%] bg-circle__1"></div>
+            <div className="absolute -top-[1%] md:top-[6%] lg:top-[20%] -left-[12%] md:left-[0%] lg:left-[12%] bg-circle__2"></div>
+            <div className="absolute bottom-14 md:bottom-[10%] lg:-bottom-[15%] left-[5%] lg:left-[24%] z-0 bg-circle__3"></div>
           </div>
           <div className="hidden lg:flex items-center justify-center relative h-60 text-sm font-light">
             <div className="footer-compass h-60 text-sm font-light">
@@ -106,21 +106,21 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="lg:hidden  relative w-[100vw] -bottom-[12vh]">
+          <div className="lg:hidden  relative w-[100vw] top-20 -bottom-[10%] md:h-[50vmin]">
             <div className="backdrop-blur-lg backdrop-contrast-50 backdrop-opacity-60 w-full h-full rounded-t-full">
               <div className="flex flex-col space-y-2 p-3">
-                <div className="footer-compass__icons_mobile flex items-center justify-center gap-4 mt-[15%] text-white">
+                <div className="footer-compass__icons_mobile flex items-center justify-center md:text-xl gap-4 mt-[15%] text-white">
                   <SiYoutube />
                   <SiFacebook />
                   <SiLinkedin />
                   <SiInstagram />
                   <SiTwitter />
                 </div>
-                <div className="text-white text-sm font-light">
+                <div className="text-white text-sm md:text-xl font-light">
                   <p>Terms of Service</p>
                   <p>Privacy Policy</p>
                 </div>
-                <div className="text-white text-sm font-light">
+                <div className="text-white text-sm md:text-xl font-light">
                   Copyright 2021 &copy; Peddle Technologies, All Rights
                   Reserved.
                 </div>
