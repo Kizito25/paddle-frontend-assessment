@@ -1,11 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
-const toggleContactModal = () => {
-  console.log("Contact Modal Opened");
-};
+import { useState } from "react";
+import { ModalComp } from "../components";
 
 const NavBar = ({ btn_color, bg_color, text_color }) => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const toggleContactModal = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
   return (
     <nav
       className="flex items-center justify-between p-5 lg:p-10"
@@ -13,6 +16,9 @@ const NavBar = ({ btn_color, bg_color, text_color }) => {
         backgroundColor: bg_color,
       }}
     >
+      {modalIsOpen && (
+        <ModalComp modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />
+      )}
       <div
         className="text-2xl md:text-3xl lg:text-4xl font-bold"
         style={{ color: text_color }}
