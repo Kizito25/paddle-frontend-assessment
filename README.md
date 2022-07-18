@@ -1,5 +1,4 @@
 # paddle-frontend-assessment
-
 # **Frontend Coding Challenge**
 
 This is a project task to test frontend skills.
@@ -19,6 +18,8 @@ This project has a complex Layout which will leave anyone stunned at first, but 
 3. Start the app using
 `npm run dev` or  `yarn dev`
 
+[The Live Link](http://test231.netlify.app "The Live Link")
+
 ### Voila!! it is now open in your browser
 
 ## Routes
@@ -34,3 +35,4 @@ This project has a complex Layout which will leave anyone stunned at first, but 
 
 
 #### Thanks for checkingg out the project
+[1]: http://test231.netlify.app
