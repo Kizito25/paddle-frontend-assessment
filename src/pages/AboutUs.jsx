@@ -98,6 +98,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+        <div className="col-span-4 bg-[rgb(32,0,67)] h-20 w-full"> </div>
       </div>
       <Footer
         bg_color={style.bg_color}
