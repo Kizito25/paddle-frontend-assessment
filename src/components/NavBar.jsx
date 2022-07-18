@@ -17,20 +17,26 @@ const NavBar = ({ btn_color, bg_color, text_color }) => {
         className="text-2xl md:text-3xl lg:text-4xl font-bold"
         style={{ color: text_color }}
       >
-        Logo
+        <Link className="hover:text-[rgb(254,63,248)]" to="/">
+          Logo
+        </Link>
       </div>
       <ul
         className="flex items-center gap-2 md:gap-4 lg:gap-10 uppercase text-xs font-medium"
         style={{ color: text_color }}
       >
         <li>
-          <Link to="/">About Us</Link>
+          <Link className="hover:text-[rgb(254,63,248)]" to="/about">
+            About Us
+          </Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <Link className="hover:text-[rgb(254,63,248)]" to="/blog">
+            Blog
+          </Link>
         </li>
         <li
-          className="py-2 px-3 lg:py-3 lg:px-5 rounded-full cursor-pointer"
+          className="hover:text-[rgb(254,63,248)] py-2 px-3 lg:py-3 lg:px-5 rounded-full cursor-pointer"
           style={{ backgroundColor: btn_color }}
           onClick={toggleContactModal}
         >

@@ -17,14 +17,14 @@ const NavBarWhite = ({ btn_color, bg_color, text_color }) => {
         className="text-2xl md:text-3xl lg:text-4xl font-bold"
         style={{ color: text_color }}
       >
-        Logo
+        <Link to="/">Logo</Link>
       </div>
       <ul
         className="flex items-center gap-2 md:gap-4 lg:gap-10 uppercase text-xs font-medium"
         style={{ color: text_color }}
       >
         <li className="hover:text-[rgb(254,63,248)]">
-          <Link to="/">About Us</Link>
+          <Link to="/about">About Us</Link>
         </li>
         <li className="hover:text-[rgb(254,63,248)]">
           <Link to="/blog">Blog</Link>

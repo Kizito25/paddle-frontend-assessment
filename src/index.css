@@ -9,9 +9,7 @@
   /* About Us Styles */
 
   * {
-    font-family: "Adobe Clean", sans-serif;
-    /* font-family: "Adobe Clean Serif", sans-serif; */
-    /* font-family: "Adobe Clean UX", sans-serif; */
+    font-family: "Poppins", sans-serif;
   }
   .hero__coming-soon {
     background: linear-gradient(
@@ -61,11 +59,15 @@
     height: 150px;
     width: 150px;
   }
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .footer-compass__1 {
     display: block;
-    margin-top: 20px;
     height: 45vh;
-    width: 200vmin;
+    width: 100vw;
     z-index: 100;
     --webkit-clip-path: circle(60% at 51% 200%);
     clip-path: circle(60% at 51% 200%);
@@ -81,9 +83,10 @@
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    bottom: 0;
+    justify-content: end;
+    position: absolute;
+    left: -50%;
+    bottom: -33%;
     color: white;
   }
   .footer-compass__icons {

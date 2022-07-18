@@ -7,13 +7,20 @@ import {
   RecentArticles,
 } from "../components";
 import { FiSearch } from "react-icons/fi";
+
 const Blog = () => {
+  const style = {
+    bg_color: "rgba(250,250,250)",
+    btn_color: "rgba(255,255,255)",
+    text_color: "rgba(000,000,000)",
+  };
+
   return (
     <section className="hero__blog min-h-screen">
       <NavBarWhite
-        bg_color="rgba(250,250,250)"
-        btn_color="rgba(255,255,255)"
-        text_color="rgba(000,000,000)"
+        bg_color={style.bg_color}
+        btn_color={style.btn_color}
+        text_color={style.text_color}
       />
       <Header page="Blog" title="Articles and News" />
       <div className="p-5 lg:m-10 lg:p-10">
@@ -28,7 +35,7 @@ const Blog = () => {
               Lorem ipsum dolor sit amet, consectetur adi
             </p>
           </div>
-          <form className="flex relative w-full lg:w-1/2 my-10">
+          <form className="flex relative w-full lg:w-1/2 my-10 lg:my-0">
             <input
               type="search"
               placeholder="search here"
@@ -55,7 +62,7 @@ const Blog = () => {
         </div>
       </div>
       <Footer
-        title="Want to Know More About Netrics?"
+        title="Want to Know More About Metrics?"
         subtitle="Learn who we are and what drives us."
         link="#"
       />

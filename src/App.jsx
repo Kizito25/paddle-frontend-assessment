@@ -85,7 +85,7 @@ function App() {
             <div className="absolute -top-[1%] md:top-[6%] lg:top-[20%] -left-[12%] md:left-[0%] lg:left-[12%] bg-circle__2"></div>
             <div className="absolute bottom-14 md:bottom-[10%] lg:-bottom-[15%] left-[5%] lg:left-[24%] z-0 bg-circle__3"></div>
           </div>
-          <div className="hidden lg:flex items-center justify-center relative h-60 text-sm font-light">
+          <div className="footer hidden lg:flex items-center justify-center relative h-60 text-sm font-light">
             <div className="footer-compass h-60 text-sm font-light">
               <div className="footer-compass__1">
                 <div className="footer-compass__icons">
@@ -106,8 +106,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="lg:hidden  relative w-[100vw] top-20 -bottom-[10%] md:h-[50vmin]">
-            <div className="backdrop-blur-lg backdrop-contrast-50 backdrop-opacity-60 w-full h-full rounded-t-full">
+          <div className="lg:hidden  relative w-[100vw] md:w-[80vw] top-20 -bottom-[10%] h-[70vmin] md:h-[60vmin]">
+            <div className="backdrop-blur-md backdrop-contrast-40 backdrop-opacity-90 bg-white/5 w-full h-full rounded-t-full">
               <div className="flex flex-col space-y-2 p-3">
                 <div className="footer-compass__icons_mobile flex items-center justify-center md:text-xl gap-4 mt-[15%] text-white">
                   <SiYoutube />
@@ -116,11 +116,11 @@ function App() {
                   <SiInstagram />
                   <SiTwitter />
                 </div>
-                <div className="text-white text-sm md:text-xl font-light">
+                <div className="text-white text-sm font-light">
                   <p>Terms of Service</p>
                   <p>Privacy Policy</p>
                 </div>
-                <div className="text-white text-sm md:text-xl font-light">
+                <div className="text-white text-sm font-light">
                   Copyright 2021 &copy; Peddle Technologies, All Rights
                   Reserved.
                 </div>
